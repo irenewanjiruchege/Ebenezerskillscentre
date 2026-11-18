@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="96" fill="#0A2A66"/>
+  <!-- Stylized Ebenezer E-block emblem -->
+  <path d="M128 136C128 113.909 145.909 96 168 96H320V148C320 165.673 305.673 180 288 180H192V380H156C140.536 380 128 367.464 128 352V136Z" fill="#FFFFFF"/>
+  <path d="M214 218H318C329.046 218 338 226.954 338 238V242C338 264.091 320.091 282 298 282H214V218Z" fill="#F58220"/>
+  <path d="M214 316H340C351.046 316 360 324.954 360 336V340C360 362.091 342.091 380 320 380H214V316Z" fill="#F58220"/>
+  <!-- Digital pixel squares -->
+  <rect x="348" y="88" width="32" height="32" rx="6" fill="#F2B705"/>
+  <rect x="348" y="132" width="32" height="32" rx="6" fill="#F58220"/>
+</svg>

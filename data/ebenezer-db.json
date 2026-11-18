@@ -1,0 +1,498 @@
+{
+  "courses": [
+    {
+      "id": "comp-basics",
+      "category": "computer",
+      "title": "Computer Skills: Beginner to Intermediate",
+      "level": "Beginner",
+      "duration": "4 Weeks",
+      "schedule": "Mon–Fri · Morning or Afternoon",
+      "fee": "KSh 3,500",
+      "highlights": [
+        "Typing & mouse mastery",
+        "Windows file organisation",
+        "Email, internet & safe browsing",
+        "Everyday cyber services"
+      ],
+      "active": true
+    },
+    {
+      "id": "comp-office",
+      "category": "computer",
+      "title": "Office Productivity (Word, Excel, PowerPoint, Access)",
+      "level": "Intermediate to Advanced",
+      "duration": "6 Weeks",
+      "schedule": "Mon–Sat · 4-Seat Practical Lab",
+      "fee": "KSh 5,500",
+      "highlights": [
+        "MS Word formatting & CVs",
+        "MS Excel formulas & budgets",
+        "PowerPoint presentations",
+        "MS Access databases"
+      ],
+      "active": true
+    },
+    {
+      "id": "comp-digital",
+      "category": "computer",
+      "title": "Internet, eCitizen & Digital Workplace Essentials",
+      "level": "All Levels",
+      "duration": "2 Weeks",
+      "schedule": "Flexible · Individual or Small Group",
+      "fee": "KSh 2,500",
+      "highlights": [
+        "Online forms & applications",
+        "Cloud documents & Google Drive",
+        "Digital communication etiquette",
+        "Certificate upon completion"
+      ],
+      "active": true
+    },
+    {
+      "id": "tuit-cbc",
+      "category": "tuition",
+      "title": "Primary & CBC Homework / KPSEA Support",
+      "level": "Primary (Grade 1–6)",
+      "duration": "Monthly / Termly",
+      "schedule": "After School & Saturdays",
+      "fee": "KSh 1,500 / month",
+      "highlights": [
+        "CBC project & homework support",
+        "KPSEA foundational revision",
+        "Reading & numeracy confidence",
+        "Parent progress updates"
+      ],
+      "active": true
+    },
+    {
+      "id": "tuit-jss",
+      "category": "tuition",
+      "title": "Junior Secondary (JSS) & KJSEA Coaching",
+      "level": "Grade 7–9",
+      "duration": "Monthly / Holiday Bootcamp",
+      "schedule": "After School & School Holidays",
+      "fee": "KSh 2,000 / month",
+      "highlights": [
+        "Integrated Science & Maths",
+        "KJSEA assessment readiness",
+        "Guided past-paper practice",
+        "Small-group attention"
+      ],
+      "active": true
+    },
+    {
+      "id": "tuit-kcse",
+      "category": "tuition",
+      "title": "Secondary School Tuition & KCSE Preparation",
+      "level": "Form 1–4",
+      "duration": "Monthly / Holiday Intensive",
+      "schedule": "Evenings, Saturdays & Holidays",
+      "fee": "KSh 2,500 / month",
+      "highlights": [
+        "KCSE exam technique & timing",
+        "Sciences, Mathematics & English",
+        "Structured revision plans",
+        "Drop-in homework help (KSh 200/session)"
+      ],
+      "active": true
+    },
+    {
+      "id": "read-kids",
+      "category": "reading",
+      "title": "Reading & Comprehension Confidence",
+      "level": "Primary & JSS",
+      "duration": "Monthly",
+      "schedule": "3 Sessions Weekly",
+      "fee": "KSh 1,500 / month",
+      "highlights": [
+        "Phonics & fluency building",
+        "Passage comprehension",
+        "Vocabulary expansion",
+        "Reading aloud with confidence"
+      ],
+      "active": true
+    },
+    {
+      "id": "read-adult",
+      "category": "reading",
+      "title": "Adult English & Everyday Communication",
+      "level": "Youth & Adults",
+      "duration": "6 Weeks / Monthly",
+      "schedule": "Morning or Late Afternoon",
+      "fee": "KSh 2,000 / month",
+      "highlights": [
+        "Practical spoken English",
+        "Reading notices, forms & messages",
+        "Business & customer conversation",
+        "Supportive, private pace"
+      ],
+      "active": true
+    },
+    {
+      "id": "cont-yt",
+      "category": "content",
+      "title": "YouTube, Podcast & Audio-Video Creation",
+      "level": "Beginner to Creator",
+      "duration": "4 Weeks",
+      "schedule": "Tue, Thu & Sat Sessions",
+      "fee": "KSh 4,500",
+      "highlights": [
+        "Microphone & camera setup",
+        "Recording clear voice & video",
+        "Podcast & YouTube channel launch",
+        "Storytelling & scripting"
+      ],
+      "active": true
+    },
+    {
+      "id": "cont-edit",
+      "category": "content",
+      "title": "Practical Video & Audio Editing Lab",
+      "level": "Intermediate",
+      "duration": "3 Weeks",
+      "schedule": "Flexible 4-Seat Lab",
+      "fee": "KSh 3,500",
+      "highlights": [
+        "Cutting, captions & audio cleanup",
+        "Thumbnail & poster graphics",
+        "Reels, TikTok & YouTube export",
+        "Portfolio piece completed"
+      ],
+      "active": true
+    },
+    {
+      "id": "ent-youth",
+      "category": "enterprise",
+      "title": "Ngama Youth Online-Earning & Virtual Assistant Track",
+      "level": "Youth & School Leavers",
+      "duration": "4 Weeks",
+      "schedule": "Mon–Fri · Practical Lab",
+      "fee": "KSh 3,500",
+      "highlights": [
+        "Virtual assistant & data-entry workflows",
+        "Online profile & client proposal writing",
+        "Digital bookkeeping & Canva design",
+        "Safe online earning & scam awareness"
+      ],
+      "active": true
+    },
+    {
+      "id": "ent-biz",
+      "category": "enterprise",
+      "title": "Small Business Digital & Print Branding Starter",
+      "level": "Entrepreneurs & Groups",
+      "duration": "2 Weeks",
+      "schedule": "Custom / By Appointment",
+      "fee": "Contact for price",
+      "highlights": [
+        "Business flyers & price list design",
+        "WhatsApp Business catalogue setup",
+        "Basic Excel sales tracker",
+        "Receipt & invoice templates"
+      ],
+      "active": true
+    }
+  ],
+  "admissions": [
+    {
+      "id": "adm-seed-1",
+      "admissionNo": "EBZ-ADM-2026-1001",
+      "submittedAt": "2026-11-18T05:15:30.511Z",
+      "intakeTerm": "November / Holiday Intake",
+      "fullName": "Daniel Lekishon",
+      "dateOfBirth": "2006-05-14",
+      "gender": "Male",
+      "idOrBirthCert": "40129384",
+      "phone": "0722 310492",
+      "email": "",
+      "address": "Ngama Centre",
+      "townArea": "Ngama",
+      "schoolOrOccupation": "Form 4 Leaver",
+      "highestLevel": "KCSE",
+      "programmes": [
+        "Computer Training (Intermediate)",
+        "Enterprise & Youth Online Skills"
+      ],
+      "specificCourse": "Office Productivity & Online-Earning Track",
+      "preferredStartDate": "2026-11-18",
+      "preferredDays": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "preferredTime": "Morning",
+      "trainingMode": "Group",
+      "expectedDuration": "6 Weeks",
+      "isMinor": false,
+      "guardianName": "",
+      "guardianRelationship": "",
+      "guardianPhone": "",
+      "guardianEmail": "",
+      "guardianAddress": "",
+      "guardianAltContact": "",
+      "declarationAccepted": true,
+      "privacyAccepted": true,
+      "status": "Accepted",
+      "paymentStatus": "Deposit Paid"
+    }
+  ],
+  "orders": [
+    {
+      "ref": "EBZ-PRT-1042",
+      "createdAt": "2026-11-18T05:15:30.511Z",
+      "updatedAt": "2026-11-18T05:15:30.511Z",
+      "customerType": "Church",
+      "institutionOrName": "Ngama Community Fellowship",
+      "contactPerson": "Pastor Moses Kimani",
+      "phone": "0712 884210",
+      "email": "",
+      "serviceType": "Church Event Programmes (A5 Folded)",
+      "isPartnerJob": false,
+      "size": "A5 Folded",
+      "quantity": 120,
+      "colourMode": "Full Colour",
+      "paperType": "130gsm Gloss",
+      "finishing": "Creased & Folded",
+      "needsDesignLayout": true,
+      "fileName": "Sunday_Service_Programme_Draft.docx",
+      "notes": "Include gold header and choir schedule.",
+      "requiredDate": "2026-11-18",
+      "deliveryLocation": "Collect at Ngama Centre",
+      "estimatedTotal": "KSh 4,800 (Confirmed)",
+      "status": "Printing"
+    },
+    {
+      "ref": "EBZ-PRT-1043",
+      "createdAt": "2026-11-18T05:15:30.511Z",
+      "updatedAt": "2026-11-18T05:15:30.511Z",
+      "customerType": "School",
+      "institutionOrName": "Illasit Mixed Day Secondary",
+      "contactPerson": "Deputy Principal",
+      "phone": "0723 551019",
+      "email": "",
+      "serviceType": "Revision Worksheets & Term Notices",
+      "isPartnerJob": false,
+      "size": "A4",
+      "quantity": 250,
+      "colourMode": "Black & White",
+      "paperType": "80gsm Bond",
+      "finishing": "Stapled Sets",
+      "needsDesignLayout": false,
+      "fileName": "Form4_Math_Revision.pdf",
+      "notes": "Double-sided A4 sets sorted by stream.",
+      "requiredDate": "2026-11-18",
+      "deliveryLocation": "Illasit Stage Drop-off",
+      "estimatedTotal": "KSh 2,500",
+      "status": "In design"
+    },
+    {
+      "ref": "EBZ-PRT-1044",
+      "createdAt": "2026-11-18T05:15:30.511Z",
+      "updatedAt": "2026-11-18T05:15:30.511Z",
+      "customerType": "Individual",
+      "institutionOrName": "Grace Naipanoi",
+      "contactPerson": "Grace Naipanoi",
+      "phone": "0719 402115",
+      "email": "",
+      "serviceType": "CV Typing, Layout & 10 Copies",
+      "isPartnerJob": false,
+      "size": "A4",
+      "quantity": 10,
+      "colourMode": "Black & White",
+      "paperType": "80gsm Bond",
+      "finishing": "Laminated Cover Sheet",
+      "needsDesignLayout": true,
+      "fileName": "Handwritten_CV_Photo.jpg",
+      "notes": "Ready for collection at reception.",
+      "requiredDate": "2026-11-18",
+      "deliveryLocation": "Ngama Centre",
+      "estimatedTotal": "KSh 450",
+      "status": "Ready"
+    },
+    {
+      "ref": "EBZ-PRT-1041",
+      "createdAt": "2026-11-18T05:15:30.511Z",
+      "updatedAt": "2026-11-18T05:15:30.511Z",
+      "customerType": "Health Facility",
+      "institutionOrName": "Ngama Health Dispensary",
+      "contactPerson": "Facility Administrator",
+      "phone": "0701 992341",
+      "email": "",
+      "serviceType": "Patient Record Forms & Signage Banner",
+      "isPartnerJob": true,
+      "size": "A4 + 4ft x 2ft Banner",
+      "quantity": 300,
+      "colourMode": "Full Colour",
+      "paperType": "80gsm + PVC Vinyl",
+      "finishing": "Eyelets on Banner (Partner Arranged)",
+      "needsDesignLayout": true,
+      "fileName": "Clinic_Signage_Brief.txt",
+      "notes": "Banner arranged through external production partner.",
+      "requiredDate": "2026-11-18",
+      "deliveryLocation": "Ngama Dispensary",
+      "estimatedTotal": "Contact for confirmed partner quote",
+      "status": "Received"
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-seed-1",
+      "createdAt": "2026-11-18T05:15:30.511Z",
+      "name": "Josephat M.",
+      "phone": "0711 234567",
+      "offerType": "Free First Lesson",
+      "interestArea": "Computer Training",
+      "referralCode": "EBZ-JOS42"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk-seed-1",
+      "createdAt": "2026-11-18T05:15:30.511Z",
+      "date": "2026-11-18",
+      "session": "Morning",
+      "learnerName": "Mercy W.",
+      "phone": "0720 112233",
+      "topic": "MS Excel Practice"
+    },
+    {
+      "id": "bk-seed-2",
+      "createdAt": "2026-11-18T05:15:30.511Z",
+      "date": "2026-11-18",
+      "session": "Morning",
+      "learnerName": "Brian K.",
+      "phone": "0718 445566",
+      "topic": "Free Trial Computer Lesson"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "rev-1",
+      "name": "Beatrice Naisenya",
+      "role": "Parent & Trader",
+      "organisation": "Ngama Market",
+      "quote": "My son struggled with reading confidence in Grade 5. After two months of afternoon reading and CBC support at Ebenezer, he reads aloud in class without fear.",
+      "outcome": "Improved Grade 5 English fluency in 8 weeks",
+      "rating": 5,
+      "createdAt": "2026-11-18T05:15:30.511Z"
+    },
+    {
+      "id": "rev-2",
+      "name": "Rev. Samuel Mwathe",
+      "role": "Senior Pastor",
+      "organisation": "Illasit Gospel Chapel",
+      "quote": "We used to travel all the way to Loitokitok for church programmes and funeral booklets. Ebenezer designed and delivered 150 clean copies on time.",
+      "outcome": "Saved travel time across 3 church events",
+      "rating": 5,
+      "createdAt": "2026-11-18T05:15:30.511Z"
+    },
+    {
+      "id": "rev-3",
+      "name": "Kelvin Omondi",
+      "role": "Youth Graduate",
+      "organisation": "Kimana / Ngama",
+      "quote": "Having only 4 seats in the lab meant the instructor checked my Word and Excel work step by step. I typed my own CV and got an internship interview.",
+      "outcome": "Completed Office Suite in 6 weeks & secured placement",
+      "rating": 5,
+      "createdAt": "2026-11-18T05:15:30.511Z"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "title": "Ebenezer Services Overview Flyer",
+      "category": "Training & Services",
+      "caption": "Colour-coded training programmes and document services offered at our Ngama centre.",
+      "imageUrl": "/assets/aistudio/ChatGPT_Image_Oct_5__2026__02_02_30_PM_41fe253b.png",
+      "isPlaceholderFlyer": true
+    },
+    {
+      "id": "gal-2",
+      "title": "Institutional Printing & Outreach Brochure",
+      "category": "Schools, Churches & NGOs",
+      "caption": "Dedicated document, exam worksheet, programme, and partner-arranged banner solutions across Ngama, Illasit, Kimana, Loitokitok & Tarakea.",
+      "imageUrl": "/assets/aistudio/Ebenezer_Skills_Centre_Institutional_Brochure__3__f5eb2c58.png",
+      "isPlaceholderFlyer": true
+    },
+    {
+      "id": "gal-3",
+      "title": "Official Admission & Registration Form",
+      "category": "Admissions",
+      "caption": "Our structured learner intake form capturing course preferences, schedule, and minor guardian contacts.",
+      "imageUrl": "/assets/aistudio/ChatGPT_Image_Oct_5__2026__02_16_06_PM_17c5aa0c.png",
+      "isPlaceholderFlyer": true
+    },
+    {
+      "id": "gal-4",
+      "title": "Community Training & Exam Support Poster",
+      "category": "Student Tuition & English",
+      "caption": "Primary, JSS, KCSE revision, and adult English literacy programmes.",
+      "imageUrl": "/assets/aistudio/Ebenezer_Technology_and_Skills_Centre_Banner_d176f1a4.png",
+      "isPlaceholderFlyer": true
+    }
+  ],
+  "articles": [
+    {
+      "id": "art-1",
+      "slug": "how-to-write-a-cv-kenya",
+      "title": "How to Write a Clean, Job-Ready CV in Kajiado County",
+      "category": "Career & Documents",
+      "readTime": "3 min read",
+      "summary": "Avoid common formatting mistakes and highlight practical skills employers in NGOs, schools, and businesses actually look for.",
+      "content": [
+        "Keep your CV to 1–2 pages with a clear name header, working phone/WhatsApp number, and email address.",
+        "List your recent experience or community volunteering first, using action words (e.g., Coordinated, Typed, Managed, Assisted) rather than long paragraphs.",
+        "Always save and send your final CV as a PDF so margins do not shift on another person’s phone or laptop.",
+        "Need help? Bring your handwritten notes to Ebenezer in Ngama or claim a Free CV Check right on this website."
+      ]
+    },
+    {
+      "id": "art-2",
+      "slug": "free-va-skills-youth",
+      "title": "5 Practical Digital Skills Youth in Ngama Can Use to Earn Online",
+      "category": "Enterprise & Youth",
+      "readTime": "4 min read",
+      "summary": "From spreadsheet cleanup and document formatting to social media flyers and audio editing, learn what real remote clients pay for.",
+      "content": [
+        "Online earning starts with dependable office skills—not shortcuts. Employers and remote teams hire people who format Word reports cleanly, organise Excel sheets accurately, and reply professionally.",
+        "Basic graphic design for church, school, and shop flyers is a steady local and online skill.",
+        "In our 4-seat lab, learners build real portfolio samples before applying for Virtual Assistant or freelance tasks."
+      ]
+    },
+    {
+      "id": "art-3",
+      "slug": "cbc-kjsea-kcse-revision-guide",
+      "title": "Supporting Your Child Through CBC, KJSEA, and KCSE Revision",
+      "category": "Student Tuition",
+      "readTime": "3 min read",
+      "summary": "How small-group afternoon tuition and structured reading practice build steady confidence before national assessments.",
+      "content": [
+        "Kenya’s CBC pathway now spans Primary (KPSEA), Junior Secondary (KJSEA), and Senior Secondary alongside KCSE cohorts.",
+        "Consistent 45-minute focused practice three times a week outperforms last-minute cramming.",
+        "Our tuition sessions combine homework verification, reading comprehension, and past-paper walkthroughs with regular feedback to parents."
+      ]
+    }
+  ],
+  "promo": {
+    "headline": "School-Holiday & New Intake Registration Open",
+    "subtext": "Limited 4-seat computer lab slots · Claim a Free First Lesson or Free CV Check before intake closes.",
+    "targetDateISO": "2026-12-02T09:00:00.000Z",
+    "badgeText": "Next Intake",
+    "active": true
+  },
+  "settings": {
+    "phoneDisplay": "0714 490545",
+    "whatsappIntl": "254714490545",
+    "email": "ebenezer_ngama@gmail.com",
+    "locationLine": "Ngama, Kajiado County · Near the Kenya–Tanzania Border",
+    "hoursWeekdays": "Mon–Fri: 8:00 AM – 7:00 PM",
+    "hoursSaturday": "Saturday: 9:00 AM – 5:00 PM",
+    "mpesaPaybillOrTill": "Confirm Till / Paybill via 0714 490545 before payment",
+    "mpesaAccountName": "Ebenezer Technology & Skills Centre",
+    "googleReviewsUrl": "https://www.google.com/search?q=Ebenezer+Technology+and+Skills+Centre+Ngama+Kajiado",
+    "whatsappChannelUrl": "https://wa.me/254714490545?text=Hello%20Ebenezer%2C%20please%20add%20me%20to%20your%20WhatsApp%20Channel%20and%20course%20updates.",
+    "adminPin": "2026"
+  }
+}

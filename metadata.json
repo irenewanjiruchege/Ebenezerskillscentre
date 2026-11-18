@@ -1,0 +1,6 @@
+{
+  "name": "Ebenezer Technology and Skills Centre",
+  "description": "Digital Skills, Student Tuition, Content Creation, Printing & Design, and Institutional Services in Ngama, Kajiado County.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
