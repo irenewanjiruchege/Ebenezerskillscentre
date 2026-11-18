@@ -18,38 +18,65 @@ interface AvailabilitySlot {
 
 const CATEGORY_META: Record<
   Exclude<ServiceCategory, 'printing'> | 'all',
-  {label: string; accent: string; badgeBg: string; note?: string}
+  {label: string; accent: string; badgeBg: string; note?: string; photoUrl?: string; photoAlt?: string}
 > = {
   all: {label: 'All Programmes', accent: 'text-[#0A2A66]', badgeBg: 'bg-[#0A2A66]'},
   computer: {
     label: 'Computer Training',
     accent: 'text-[#1D4ED8]',
     badgeBg: 'bg-[#1D4ED8]',
-    note: 'Beginner to Advanced · Word, Excel, PowerPoint, Access, Internet & Digital Skills.',
+    note: 'Introduction to Computers (6 Weeks · KSh 5,000) — covers MS Word, MS Excel, MS PowerPoint, MS Access, plus Internet and Online Security.',
+    photoUrl: '/assets/photos/computer-training.jpg',
+    photoAlt: 'Young man working at a laptop during Computer Training',
   },
   tuition: {
     label: 'Student Tuition',
     accent: 'text-[#15803D]',
     badgeBg: 'bg-[#15803D]',
     note: 'Aligned with Kenya’s current CBC (Primary / KPSEA), JSS (KJSEA), Secondary & KCSE exam pathways.',
+    photoUrl: '/assets/photos/student-tuition.jpg',
+    photoAlt: 'Schoolgirl writing during focused Student Tuition',
   },
   reading: {
     label: 'Reading & English',
     accent: 'text-[#6D28D9]',
     badgeBg: 'bg-[#6D28D9]',
     note: 'Phonics, comprehension, spoken confidence, and supportive adult English lessons.',
+    photoUrl: '/assets/photos/reading-classes.jpg',
+    photoAlt: 'Young woman reading a book during Reading & English classes',
   },
   content: {
     label: 'Content Creation',
     accent: 'text-[#EA580C]',
     badgeBg: 'bg-[#EA580C]',
-    note: 'YouTube, Podcasts, Video & Audio Recording, and Practical Editing.',
+    note: '2-Month (8-Week) Practical Media Course · KSh 10,000 · From channel setup and phone filming to CapCut, Audacity, Canva, growth & certificate.',
+    photoUrl: '/assets/photos/content-creation.jpg',
+    photoAlt: 'Young creator wearing headphones with studio microphone for Content Creation',
   },
   enterprise: {
     label: 'Enterprise & Youth',
     accent: 'text-[#0A2A66]',
     badgeBg: 'bg-[#0A2A66]',
     note: 'Ngama Youth Online-Earning Track, Virtual Assistant basics & small-business digital setup.',
+  },
+};
+
+const CATEGORY_PHOTOS: Record<string, {url: string; alt: string}> = {
+  computer: {
+    url: '/assets/photos/computer-training.jpg',
+    alt: 'Young man at laptop in Computer Training',
+  },
+  tuition: {
+    url: '/assets/photos/student-tuition.jpg',
+    alt: 'Schoolgirl writing during Student Tuition',
+  },
+  reading: {
+    url: '/assets/photos/reading-classes.jpg',
+    alt: 'Young woman reading a book',
+  },
+  content: {
+    url: '/assets/photos/content-creation.jpg',
+    alt: 'Young man with headphones and microphone recording content',
   },
 };
 
@@ -70,7 +97,7 @@ export const ProgramsAndBookingView: React.FC<ProgramsAndBookingViewProps> = ({
   const [selectedSession, setSelectedSession] = useState<'Morning' | 'Afternoon' | 'Evening'>('Morning');
   const [learnerName, setLearnerName] = useState('');
   const [phone, setPhone] = useState('');
-  const [topic, setTopic] = useState('Free Trial Computer Lesson');
+  const [topic, setTopic] = useState('Introduction to Computers (6 Weeks)');
   const [bookingMsg, setBookingMsg] = useState<{type: 'ok' | 'err'; text: string} | null>(null);
   const [submittingBooking, setSubmittingBooking] = useState(false);
 
@@ -87,7 +114,6 @@ export const ProgramsAndBookingView: React.FC<ProgramsAndBookingViewProps> = ({
         setAvailability(data.availability || []);
       }
     } catch {
-      // Offline fallback display
       setAvailability([
         {session: 'Morning', capacity: 4, booked: 1, remaining: 3},
         {session: 'Afternoon', capacity: 4, booked: 0, remaining: 4},
@@ -148,11 +174,28 @@ export const ProgramsAndBookingView: React.FC<ProgramsAndBookingViewProps> = ({
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14 space-y-14">
       {/* Header & Filter Bar */}
       <div>
-        <p className="text-xs font-semibold tracking-wide text-[#F58220]">Courses, Tuition &amp; Fee Guide</p>
-        <h2 className="mt-1 text-3xl sm:text-4xl font-bold text-[#0A2A66] text-balance">
-          Training Programmes &amp; Schedules
-        </h2>
-        {activeMeta.note && <p className="mt-2 text-sm text-slate-600 max-w-2xl">{activeMeta.note}</p>}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div className={activeMeta.photoUrl ? 'lg:col-span-7' : 'lg:col-span-12'}>
+            <p className="text-xs font-semibold tracking-wide text-[#F58220]">Courses, Tuition &amp; Fee Guide</p>
+            <h2 className="mt-1 text-3xl sm:text-4xl font-bold text-[#0A2A66] text-balance">
+              {filter === 'all' ? 'Training Programmes & Schedules' : activeMeta.label}
+            </h2>
+            {activeMeta.note && <p className="mt-2 text-sm text-slate-600 max-w-2xl">{activeMeta.note}</p>}
+          </div>
+
+          {activeMeta.photoUrl && (
+            <div className="lg:col-span-5">
+              <div className="group overflow-hidden rounded-2xl border border-[#0A2A66]/12 bg-white aspect-[16/10] shadow-sm">
+                <img
+                  src={activeMeta.photoUrl}
+                  alt={activeMeta.photoAlt || activeMeta.label}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Segmented Filter Tabs */}
         <div className="mt-6 flex flex-wrap items-center gap-1.5 p-1.5 bg-white border border-[#0A2A66]/10 rounded-xl w-fit">
@@ -177,50 +220,105 @@ export const ProgramsAndBookingView: React.FC<ProgramsAndBookingViewProps> = ({
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredCourses.map((course) => {
             const meta = CATEGORY_META[course.category as Exclude<ServiceCategory, 'printing'>] || CATEGORY_META.all;
+            const cardPhoto = CATEGORY_PHOTOS[course.category];
+            const hasSyllabus = Boolean(course.syllabus && course.syllabus.length > 0);
+
             return (
               <article
                 key={course.id}
-                className="rounded-2xl border border-[#0A2A66]/12 bg-white p-6 flex flex-col justify-between"
+                className={`group rounded-2xl border border-[#0A2A66]/12 bg-white p-6 flex flex-col justify-between ${
+                  hasSyllabus ? 'md:col-span-2 lg:col-span-3' : ''
+                }`}
               >
                 <div>
-                  <div className="flex items-center justify-between gap-2 text-xs text-slate-500">
-                    <span className={`font-semibold ${meta.accent}`}>{meta.label}</span>
-                    <span>{course.level}</span>
+                  {cardPhoto && !hasSyllabus && filter === 'all' && (
+                    <div className="mb-4 overflow-hidden rounded-xl bg-slate-100 aspect-[16/10]">
+                      <img
+                        src={cardPhoto.url}
+                        alt={cardPhoto.alt}
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+
+                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between gap-2 text-xs text-slate-500">
+                        <span className={`font-semibold ${meta.accent}`}>{meta.label}</span>
+                        <span>{course.level}</span>
+                      </div>
+
+                      <h3 className="mt-2 font-display text-lg sm:text-xl font-bold text-[#0A2A66] leading-snug">
+                        {course.title}
+                      </h3>
+
+                      <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-600 border-y border-slate-100 py-2.5 tabular-nums">
+                        <span className="font-bold text-sm text-[#0A2A66]">{course.fee}</span>
+                        <span aria-hidden="true">·</span>
+                        <span>{course.duration}</span>
+                        {course.schedule && course.schedule.trim().length > 0 && (
+                          <>
+                            <span aria-hidden="true">·</span>
+                            <span>{course.schedule}</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+
+                    {hasSyllabus && cardPhoto && (
+                      <div className="lg:w-72 shrink-0 overflow-hidden rounded-xl bg-slate-100 aspect-[16/10]">
+                        <img
+                          src={cardPhoto.url}
+                          alt={cardPhoto.alt}
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                          className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    )}
                   </div>
 
-                  <h3 className="mt-2 font-display text-lg font-bold text-[#0A2A66] leading-snug">
-                    {course.title}
-                  </h3>
-
-                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-600 border-y border-slate-100 py-2.5 tabular-nums">
-                    <span className="font-bold text-sm text-[#0A2A66]">{course.fee}</span>
-                    <span aria-hidden="true">·</span>
-                    <span>{course.duration}</span>
-                    <span aria-hidden="true">·</span>
-                    <span>{course.schedule}</span>
-                  </div>
-
-                  <ul className="mt-3.5 space-y-1.5 text-xs sm:text-sm text-slate-700">
-                    {course.highlights.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <span className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 ${meta.badgeBg}`} aria-hidden="true" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {hasSyllabus && course.syllabus ? (
+                    <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {course.syllabus.map((w) => (
+                        <div
+                          key={w.week}
+                          className="rounded-xl border border-[#EA580C]/20 bg-[#FAF7F2] p-4 space-y-1.5"
+                        >
+                          <p className="text-xs font-bold text-[#EA580C]">{w.week}</p>
+                          <p className="text-xs sm:text-sm text-[#0A2A66] font-medium leading-snug">{w.topic}</p>
+                          <p className="text-xs text-slate-700">
+                            <span className="font-semibold text-[#0A2A66]">Practical: </span>
+                            {w.practical}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <ul className="mt-3.5 space-y-1.5 text-xs sm:text-sm text-slate-700">
+                      {course.highlights.map((item) => (
+                        <li key={item} className="flex items-start gap-2">
+                          <span className={`mt-1.5 h-1.5 w-1.5 rounded-full shrink-0 ${meta.badgeBg}`} aria-hidden="true" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                <div className="mt-5 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
                   <button
                     type="button"
-                    onClick={() => onEnrolCourse(course.title)}
+                    onClick={() => onEnrolCourse(`${course.title} (${course.duration} · ${course.fee})`)}
                     className={`px-4 py-2 rounded-lg text-xs font-semibold text-white hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer ${meta.badgeBg}`}
                   >
                     Enrol in Course
                   </button>
                   <a
                     href={`https://wa.me/${whatsappIntl}?text=${encodeURIComponent(
-                      `Hello Ebenezer, I want to join "${course.title}" (${course.fee}). Please share the next start date.`
+                      `Hello Ebenezer, I want to join "${course.title}" (${course.duration}, ${course.fee}). Please share the next start date.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -359,12 +457,11 @@ export const ProgramsAndBookingView: React.FC<ProgramsAndBookingViewProps> = ({
                 onChange={(e) => setTopic(e.target.value)}
                 className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-[#0A2A66] focus:outline-none"
               >
+                <option value="Introduction to Computers (6 Weeks)">Introduction to Computers (6 Weeks · KSh 5,000)</option>
                 <option value="Free Trial Computer Lesson">Free First Computer Lesson (Trial)</option>
-                <option value="Computer Basics / Typing">Computer Basics / Typing</option>
-                <option value="MS Word, Excel & PowerPoint">MS Word, Excel &amp; PowerPoint</option>
                 <option value="Student Tuition / Revision">CBC / JSS / KCSE Tuition Session</option>
                 <option value="Reading & English Class">Reading &amp; English Practice</option>
-                <option value="Content Creation / Studio">YouTube &amp; Podcast Recording</option>
+                <option value="Content Creation (8 Weeks)">Content Creation &amp; Digital Media (8 Weeks · KSh 10,000)</option>
                 <option value="Youth Online-Earning Track">Youth Online-Earning &amp; VA Practice</option>
               </select>
             </div>

@@ -105,16 +105,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       src: '/assets/aistudio/Ebenezer_Technology_Logo_on_Cream_Texture_9898ff89.png',
       alt: 'Ebenezer Technology and Skills Centre Official Brand Logo',
       caption: 'Ebenezer Technology & Skills Centre · Ngama',
+      cover: false,
     },
     {
-      src: '/assets/aistudio/ChatGPT_Image_Oct_5__2026__02_02_30_PM_41fe253b.png',
-      alt: 'Ebenezer Training & Printing Services Flyer',
-      caption: 'Computer Training · Tuition · Reading · Content · Printing',
+      src: '/assets/photos/computer-training.jpg',
+      alt: 'Learner working at a laptop during Introduction to Computers training',
+      caption: 'Introduction to Computers · 6 Weeks · KSh 5,000',
+      cover: true,
     },
     {
-      src: '/assets/aistudio/Ebenezer_Skills_Centre_Institutional_Brochure__3__f5eb2c58.png',
-      alt: 'Ebenezer Institutional Services Brochure',
-      caption: 'Institutional Outreach · Ngama, Illasit, Kimana, Loitokitok & Tarakea',
+      src: '/assets/photos/content-creation.jpg',
+      alt: 'Creator recording podcast audio with headphones and studio microphone',
+      caption: 'Content Creation & Media · 8 Weeks · KSh 10,000',
+      cover: true,
+    },
+    {
+      src: '/assets/photos/printing-design.jpg',
+      alt: 'Printer and printed promotional materials and designs',
+      caption: 'Printing & Graphic Design · Ngama Centre',
+      cover: true,
     },
   ];
 
@@ -246,14 +255,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
 
-          {/* Right Media Column: Official Assets Showcase */}
+          {/* Right Media Column: Official Logo & Cropped Service Photos */}
           <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl border border-white/15 bg-[#0A2A66]/70 p-4">
-            <div className="relative flex-1 min-h-[260px] sm:min-h-[320px] overflow-hidden rounded-xl bg-[#FAF7F2]">
+            <div className="relative flex-1 min-h-[260px] sm:min-h-[320px] overflow-hidden rounded-xl bg-[#FAF7F2] group">
               <img
                 src={showcaseSlides[showcaseIndex].src}
                 alt={showcaseSlides[showcaseIndex].alt}
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-contain max-h-[360px] mx-auto transition-opacity duration-200"
+                className={`w-full h-full max-h-[360px] mx-auto transition-transform duration-300 group-hover:scale-105 ${
+                  showcaseSlides[showcaseIndex].cover ? 'object-cover object-top' : 'object-contain'
+                }`}
               />
             </div>
 

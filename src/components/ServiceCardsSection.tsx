@@ -20,6 +20,8 @@ interface ServiceCardSpec {
   accentText: string;
   accentBorder: string;
   icon: React.ReactNode;
+  photoUrl?: string;
+  photoAlt?: string;
   feeNote: string;
   summary: string;
   details: string[];
@@ -42,23 +44,25 @@ export const ServiceCardsSection: React.FC<ServiceCardsSectionProps> = ({
   const services: ServiceCardSpec[] = [
     {
       id: 'computer',
-      title: '01. Computer Training',
-      subtitle: 'Beginner to Advanced · 4-Seat Practical Lab',
+      title: '01. Introduction to Computers',
+      subtitle: '6 Weeks · 4-Seat Practical Lab',
       accentBg: 'bg-[#1D4ED8]',
       accentText: 'text-[#1D4ED8]',
       accentBorder: 'border-[#1D4ED8]/25',
       icon: <Monitor className="w-5 h-5 text-white" aria-hidden="true" />,
-      feeNote: 'From KSh 2,500',
-      summary: 'Hands-on computer literacy, Word, Excel, PowerPoint, Access, internet and everyday digital skills.',
+      photoUrl: '/assets/photos/computer-training.jpg',
+      photoAlt: 'Young man practising on a laptop at Ebenezer Computer Training',
+      feeNote: 'KSh 5,000 · 6 Weeks',
+      summary: 'Hands-on training covering MS Word, MS Excel, MS PowerPoint and MS Access, plus Internet and Online Security.',
       details: [
-        'Beginner typing, Windows & file organisation (4 weeks · KSh 3,500)',
-        'MS Word, Excel, PowerPoint & Access suite (6 weeks · KSh 5,500)',
-        'Internet, email, eCitizen & safe online navigation (2 weeks · KSh 2,500)',
-        'Individual or small 4-seat group coaching with certificate of completion',
+        'MS Word document formatting, letters & professional CVs',
+        'MS Excel spreadsheets, formulas & practical budgets',
+        'MS PowerPoint presentations & MS Access databases',
+        'Internet skills, email, eCitizen & Online Security',
       ],
-      actionLabel: 'View Courses & Fees',
+      actionLabel: 'View Course & Book Seat',
       targetView: 'programs',
-      whatsappMsg: 'Hello Ebenezer, I would like to enquire about Computer Training in Ngama.',
+      whatsappMsg: 'Hello Ebenezer, I would like to enrol in Introduction to Computers (6 weeks, KSh 5,000).',
     },
     {
       id: 'tuition',
@@ -68,6 +72,8 @@ export const ServiceCardsSection: React.FC<ServiceCardsSectionProps> = ({
       accentText: 'text-[#15803D]',
       accentBorder: 'border-[#15803D]/25',
       icon: <GraduationCap className="w-5 h-5 text-white" aria-hidden="true" />,
+      photoUrl: '/assets/photos/student-tuition.jpg',
+      photoAlt: 'Schoolgirl writing during focused student tuition',
       feeNote: 'From KSh 1,500 / mo',
       summary: 'Homework support, guided revision, and exam coaching for KPSEA, KJSEA, and KCSE candidates.',
       details: [
@@ -88,6 +94,8 @@ export const ServiceCardsSection: React.FC<ServiceCardsSectionProps> = ({
       accentText: 'text-[#6D28D9]',
       accentBorder: 'border-[#6D28D9]/25',
       icon: <BookOpen className="w-5 h-5 text-white" aria-hidden="true" />,
+      photoUrl: '/assets/photos/reading-classes.jpg',
+      photoAlt: 'Young woman smiling while reading an open book',
       feeNote: 'From KSh 1,500 / mo',
       summary: 'Build reading fluency, comprehension, spoken English, and everyday communication confidence.',
       details: [
@@ -103,22 +111,24 @@ export const ServiceCardsSection: React.FC<ServiceCardsSectionProps> = ({
     {
       id: 'content',
       title: '04. Content Creation',
-      subtitle: 'YouTube · Podcasts · Video & Audio · Editing',
+      subtitle: '2 Months (8 Weeks) · Practical Media Track',
       accentBg: 'bg-[#EA580C]',
       accentText: 'text-[#EA580C]',
       accentBorder: 'border-[#EA580C]/25',
       icon: <Video className="w-5 h-5 text-white" aria-hidden="true" />,
-      feeNote: 'From KSh 3,500',
-      summary: 'Learn how to script, record clean voice & video, edit, and publish on YouTube or social channels.',
+      photoUrl: '/assets/photos/content-creation.jpg',
+      photoAlt: 'Young creator wearing headphones with studio microphone',
+      feeNote: 'KSh 10,000 · 8 Weeks',
+      summary: 'Week-by-week practical course: channel setup, phone shooting, CapCut video editing, Audacity podcasting, Canva design, growth & final project.',
       details: [
-        'Microphone placement, lighting, and smartphone/camera framing',
-        'Podcast & voice-over recording in our quiet studio corner',
-        'Practical video cutting, captions, and thumbnail design',
-        'Leave the course with a published channel or portfolio episode',
+        'Weeks 1–2: YouTube/TikTok/FB/IG setup & phone shooting practicals',
+        'Weeks 3–4: CapCut video editing, captions, thumbnails & 5-min YouTube edit',
+        'Weeks 5–6: Audacity podcasting episode & Canva brand kit design',
+        'Weeks 7–8: 30-day growth calendar, monetisation, channel launch & certificate',
       ],
-      actionLabel: 'Explore Studio Track',
+      actionLabel: 'View 8-Week Syllabus',
       targetView: 'programs',
-      whatsappMsg: 'Hello Ebenezer, tell me more about the Content Creation course.',
+      whatsappMsg: 'Hello Ebenezer, tell me more about the 8-week Content Creation course (KSh 10,000).',
     },
     {
       id: 'printing',
@@ -128,6 +138,8 @@ export const ServiceCardsSection: React.FC<ServiceCardsSectionProps> = ({
       accentText: 'text-[#0F766E]',
       accentBorder: 'border-[#0F766E]/25',
       icon: <Printer className="w-5 h-5 text-white" aria-hidden="true" />,
+      photoUrl: '/assets/photos/printing-design.jpg',
+      photoAlt: 'Printer and printed promotional materials and layouts',
       feeNote: 'Quote in 5 Steps',
       summary: 'Photocopying, CVs, church & funeral programmes, flyers, and partner-arranged banners & booklets.',
       details: [
@@ -182,11 +194,23 @@ export const ServiceCardsSection: React.FC<ServiceCardsSectionProps> = ({
           return (
             <div
               key={svc.id}
-              className={`rounded-2xl border bg-white p-5 transition-colors flex flex-col justify-between ${
+              className={`group rounded-2xl border bg-white p-5 transition-colors flex flex-col justify-between ${
                 isOpen ? `${svc.accentBorder} shadow-sm` : 'border-[#0A2A66]/10 hover:border-[#0A2A66]/25'
               }`}
             >
               <div>
+                {svc.photoUrl && (
+                  <div className="mb-4 overflow-hidden rounded-xl bg-slate-100 aspect-[16/10]">
+                    <img
+                      src={svc.photoUrl}
+                      alt={svc.photoAlt || svc.title}
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+
                 <button
                   type="button"
                   onClick={() => setExpandedId(isOpen ? null : svc.id)}

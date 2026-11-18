@@ -17,6 +17,7 @@ export interface CourseItem {
   schedule: string;
   fee: string;
   highlights: string[];
+  syllabus?: {week: string; topic: string; practical: string}[];
   active: boolean;
 }
 

@@ -91,7 +91,7 @@ export const CourseQuizAndTour: React.FC<CourseQuizAndTourProps> = ({
     {
       key: 'budget' as const,
       question: '4. Preferred fee range?',
-      options: ['Up to KSh 2,000 / month', 'KSh 2,500 – 4,000', 'KSh 4,500 – 6,000 (Full Suite)', 'Need Flexible / Custom Plan'],
+      options: ['Up to KSh 2,500 / month', 'KSh 3,500 – 5,000', 'KSh 10,000 (2-Month Media Track)', 'Need Flexible / Custom Plan'],
     },
   ];
 
@@ -102,7 +102,7 @@ export const CourseQuizAndTour: React.FC<CourseQuizAndTourProps> = ({
           ? 'Primary & CBC / JSS Tuition & Reading'
           : 'Secondary Tuition & KCSE Exam Preparation',
         fee: 'KSh 1,500 – 2,500 / month',
-        schedule: answers.time || 'After School & Saturdays',
+        schedule: answers.time || 'Flexible',
         why: 'Focused small-group coaching aligned with CBC, KPSEA, KJSEA, and KCSE revision.',
       };
     }
@@ -115,23 +115,23 @@ export const CourseQuizAndTour: React.FC<CourseQuizAndTourProps> = ({
       };
     }
     if (answers.goal.includes('YouTube') || answers.goal.includes('Earn Online')) {
+      const isMedia = answers.goal.includes('YouTube') || answers.budget.includes('10,000');
       return {
-        title:
-          answers.budget.includes('2,500') || answers.goal.includes('Earn Online')
-            ? 'Ngama Youth Online-Earning & Virtual Assistant Track'
-            : 'Content Creation (YouTube, Podcasts & Editing)',
-        fee: 'KSh 3,500 – 4,500',
+        title: isMedia
+          ? 'Content Creation & Digital Media (8 Weeks)'
+          : 'Ngama Youth Online-Earning & Virtual Assistant Track',
+        fee: isMedia ? 'KSh 10,000 (2 Months / 8 Weeks)' : 'KSh 3,500 (4 Weeks)',
         schedule: answers.time || 'Practical 4-Seat Lab',
-        why: 'Hands-on recording, editing, and online client readiness in our Ngama studio.',
+        why: isMedia
+          ? 'Hands-on filming, CapCut, Audacity podcasting, Canva, growth & final channel launch.'
+          : 'Hands-on virtual assistant skills and online client readiness in our Ngama lab.',
       };
     }
     return {
-      title: answers.budget.includes('4,500')
-        ? 'Office Productivity Suite (Word, Excel, PowerPoint, Access)'
-        : 'Computer Skills: Beginner to Intermediate',
-      fee: answers.budget.includes('4,500') ? 'KSh 5,500 (6 Weeks)' : 'KSh 3,500 (4 Weeks)',
+      title: 'Introduction to Computers',
+      fee: 'KSh 5,000 (6 Weeks)',
       schedule: answers.time || 'Morning or Afternoon',
-      why: 'One computer per learner in our 4-seat lab so you master real office tasks fast.',
+      why: 'Covers MS Word, MS Excel, MS PowerPoint, MS Access, plus Internet and Online Security in our 4-seat lab.',
     };
   };
 

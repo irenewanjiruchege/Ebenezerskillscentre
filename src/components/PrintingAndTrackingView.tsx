@@ -135,13 +135,27 @@ export const PrintingAndTrackingView: React.FC<PrintingAndTrackingViewProps> = (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-14 space-y-14">
       {/* Header & Direct vs Partner Matrix */}
       <div>
-        <p className="text-xs font-semibold tracking-wide text-[#0F766E]">Printing, Typing &amp; Graphic Design</p>
-        <h2 className="mt-1 text-3xl sm:text-4xl font-bold text-[#0A2A66] text-balance">
-          Clear Print Production &amp; 5-Step Order Flow
-        </h2>
-        <p className="mt-2 text-sm text-slate-600 max-w-2xl">
-          Honest, transparent production: everyday A4 documents, CVs, and programmes are produced directly at our Ngama desk, while specialised large-format or bulk jobs are arranged by order through vetted external partners.
-        </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div className="lg:col-span-7">
+            <p className="text-xs font-semibold tracking-wide text-[#0F766E]">Printing, Typing &amp; Graphic Design</p>
+            <h2 className="mt-1 text-3xl sm:text-4xl font-bold text-[#0A2A66] text-balance">
+              Clear Print Production &amp; 5-Step Order Flow
+            </h2>
+            <p className="mt-2 text-sm text-slate-600 max-w-2xl">
+              Honest, transparent production: everyday A4 documents, CVs, and programmes are produced directly at our Ngama desk, while specialised large-format or bulk jobs are arranged by order through vetted external partners.
+            </p>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="group overflow-hidden rounded-2xl border border-[#0A2A66]/12 bg-white aspect-[16/9] shadow-sm">
+              <img
+                src="/assets/photos/printing-design.jpg"
+                alt="Printer and finished printed flyers, brochures, and designs at Ebenezer"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
 
         <div className="mt-7 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-2xl border border-[#0F766E]/25 bg-white p-6">

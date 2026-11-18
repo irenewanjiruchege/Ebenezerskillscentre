@@ -1,50 +1,19 @@
 {
   "courses": [
     {
-      "id": "comp-basics",
+      "id": "comp-intro",
       "category": "computer",
-      "title": "Computer Skills: Beginner to Intermediate",
-      "level": "Beginner",
-      "duration": "4 Weeks",
-      "schedule": "Mon–Fri · Morning or Afternoon",
-      "fee": "KSh 3,500",
-      "highlights": [
-        "Typing & mouse mastery",
-        "Windows file organisation",
-        "Email, internet & safe browsing",
-        "Everyday cyber services"
-      ],
-      "active": true
-    },
-    {
-      "id": "comp-office",
-      "category": "computer",
-      "title": "Office Productivity (Word, Excel, PowerPoint, Access)",
-      "level": "Intermediate to Advanced",
+      "title": "Introduction to Computers",
+      "level": "Beginner to Advanced",
       "duration": "6 Weeks",
-      "schedule": "Mon–Sat · 4-Seat Practical Lab",
-      "fee": "KSh 5,500",
+      "schedule": "Mon–Fri · 4-Seat Practical Lab",
+      "fee": "KSh 5,000",
       "highlights": [
-        "MS Word formatting & CVs",
-        "MS Excel formulas & budgets",
-        "PowerPoint presentations",
-        "MS Access databases"
-      ],
-      "active": true
-    },
-    {
-      "id": "comp-digital",
-      "category": "computer",
-      "title": "Internet, eCitizen & Digital Workplace Essentials",
-      "level": "All Levels",
-      "duration": "2 Weeks",
-      "schedule": "Flexible · Individual or Small Group",
-      "fee": "KSh 2,500",
-      "highlights": [
-        "Online forms & applications",
-        "Cloud documents & Google Drive",
-        "Digital communication etiquette",
-        "Certificate upon completion"
+        "MS Word formatting & documents",
+        "MS Excel spreadsheets & formulas",
+        "MS PowerPoint presentations",
+        "MS Access databases",
+        "Internet & Online Security"
       ],
       "active": true
     },
@@ -54,7 +23,7 @@
       "title": "Primary & CBC Homework / KPSEA Support",
       "level": "Primary (Grade 1–6)",
       "duration": "Monthly / Termly",
-      "schedule": "After School & Saturdays",
+      "schedule": "",
       "fee": "KSh 1,500 / month",
       "highlights": [
         "CBC project & homework support",
@@ -70,7 +39,7 @@
       "title": "Junior Secondary (JSS) & KJSEA Coaching",
       "level": "Grade 7–9",
       "duration": "Monthly / Holiday Bootcamp",
-      "schedule": "After School & School Holidays",
+      "schedule": "",
       "fee": "KSh 2,000 / month",
       "highlights": [
         "Integrated Science & Maths",
@@ -86,7 +55,7 @@
       "title": "Secondary School Tuition & KCSE Preparation",
       "level": "Form 1–4",
       "duration": "Monthly / Holiday Intensive",
-      "schedule": "Evenings, Saturdays & Holidays",
+      "schedule": "",
       "fee": "KSh 2,500 / month",
       "highlights": [
         "KCSE exam technique & timing",
@@ -129,34 +98,60 @@
       "active": true
     },
     {
-      "id": "cont-yt",
+      "id": "cont-creator",
       "category": "content",
-      "title": "YouTube, Podcast & Audio-Video Creation",
+      "title": "Content Creation & Digital Media",
       "level": "Beginner to Creator",
-      "duration": "4 Weeks",
-      "schedule": "Tue, Thu & Sat Sessions",
-      "fee": "KSh 4,500",
+      "duration": "2 Months (8 Weeks)",
+      "schedule": "Practical Studio & Editing Lab",
+      "fee": "KSh 10,000",
       "highlights": [
-        "Microphone & camera setup",
-        "Recording clear voice & video",
-        "Podcast & YouTube channel launch",
-        "Storytelling & scripting"
+        "YouTube, TikTok, Facebook & Instagram channel setup",
+        "Phone filming, CapCut editing & Audacity podcasting",
+        "Canva brand kits, thumbnails & 30-day growth strategy",
+        "Final channel/portfolio launch & certificate on completion"
       ],
-      "active": true
-    },
-    {
-      "id": "cont-edit",
-      "category": "content",
-      "title": "Practical Video & Audio Editing Lab",
-      "level": "Intermediate",
-      "duration": "3 Weeks",
-      "schedule": "Flexible 4-Seat Lab",
-      "fee": "KSh 3,500",
-      "highlights": [
-        "Cutting, captions & audio cleanup",
-        "Thumbnail & poster graphics",
-        "Reels, TikTok & YouTube export",
-        "Portfolio piece completed"
+      "syllabus": [
+        {
+          "week": "Week 1 · Foundations",
+          "topic": "Niche, audience, content planning, setting up YouTube/TikTok/Facebook/Instagram channels.",
+          "practical": "Set up your own channel with name, logo and banner."
+        },
+        {
+          "week": "Week 2 · Shooting with a phone",
+          "topic": "Framing, lighting, steady shots, clear sound.",
+          "practical": "Shoot three short clips."
+        },
+        {
+          "week": "Week 3 · Video editing 1 (CapCut)",
+          "topic": "Cutting, transitions, text, music, effects.",
+          "practical": "Edit a 60-second promo video."
+        },
+        {
+          "week": "Week 4 · Video editing 2",
+          "topic": "Colour, captions and subtitles, thumbnails, exporting for each platform.",
+          "practical": "Edit a 5-minute YouTube video."
+        },
+        {
+          "week": "Week 5 · Audio and podcasting (Audacity)",
+          "topic": "Recording, noise removal, editing, publishing.",
+          "practical": "Record and publish a podcast episode."
+        },
+        {
+          "week": "Week 6 · Design for creators (Canva)",
+          "topic": "Thumbnails, posters, social posts, logos.",
+          "practical": "Create a brand kit and thumbnail set."
+        },
+        {
+          "week": "Week 7 · Growing and earning",
+          "topic": "Titles and search tips, posting schedules, analytics, YouTube monetisation rules, selling your services.",
+          "practical": "Build a 30-day content calendar."
+        },
+        {
+          "week": "Week 8 · Final project",
+          "topic": "Launch your own channel or portfolio and present it.",
+          "practical": "Certificate on completion."
+        }
       ],
       "active": true
     },
@@ -402,35 +397,38 @@
   "gallery": [
     {
       "id": "gal-1",
-      "title": "Ebenezer Services Overview Flyer",
-      "category": "Training & Services",
-      "caption": "Colour-coded training programmes and document services offered at our Ngama centre.",
-      "imageUrl": "/assets/aistudio/ChatGPT_Image_Oct_5__2026__02_02_30_PM_41fe253b.png",
-      "isPlaceholderFlyer": true
+      "title": "Hands-On Computer Lab Training",
+      "category": "Introduction to Computers",
+      "caption": "One-to-one practical learning covering MS Word, Excel, PowerPoint, Access, Internet & Online Security.",
+      "imageUrl": "/assets/photos/computer-training.jpg"
     },
     {
       "id": "gal-2",
-      "title": "Institutional Printing & Outreach Brochure",
-      "category": "Schools, Churches & NGOs",
-      "caption": "Dedicated document, exam worksheet, programme, and partner-arranged banner solutions across Ngama, Illasit, Kimana, Loitokitok & Tarakea.",
-      "imageUrl": "/assets/aistudio/Ebenezer_Skills_Centre_Institutional_Brochure__3__f5eb2c58.png",
-      "isPlaceholderFlyer": true
+      "title": "Focused Student Tuition",
+      "category": "Student Tuition",
+      "caption": "CBC, Primary, JSS and Secondary learners receiving structured homework and exam support.",
+      "imageUrl": "/assets/photos/student-tuition.jpg"
     },
     {
       "id": "gal-3",
-      "title": "Official Admission & Registration Form",
-      "category": "Admissions",
-      "caption": "Our structured learner intake form capturing course preferences, schedule, and minor guardian contacts.",
-      "imageUrl": "/assets/aistudio/ChatGPT_Image_Oct_5__2026__02_16_06_PM_17c5aa0c.png",
-      "isPlaceholderFlyer": true
+      "title": "Reading & English Confidence",
+      "category": "Reading & English",
+      "caption": "Guided reading, comprehension, and adult English communication sessions.",
+      "imageUrl": "/assets/photos/reading-classes.jpg"
     },
     {
       "id": "gal-4",
-      "title": "Community Training & Exam Support Poster",
-      "category": "Student Tuition & English",
-      "caption": "Primary, JSS, KCSE revision, and adult English literacy programmes.",
-      "imageUrl": "/assets/aistudio/Ebenezer_Technology_and_Skills_Centre_Banner_d176f1a4.png",
-      "isPlaceholderFlyer": true
+      "title": "Podcast & Video Creator Studio",
+      "category": "Content Creation",
+      "caption": "8-week practical media course covering filming, CapCut, Audacity, Canva, and YouTube growth.",
+      "imageUrl": "/assets/photos/content-creation.jpg"
+    },
+    {
+      "id": "gal-5",
+      "title": "Print Production & Design Desk",
+      "category": "Printing & Design",
+      "caption": "Crisp CVs, school worksheets, church programmes, and custom document layouts.",
+      "imageUrl": "/assets/photos/printing-design.jpg"
     }
   ],
   "articles": [
@@ -485,7 +483,7 @@
   "settings": {
     "phoneDisplay": "0714 490545",
     "whatsappIntl": "254714490545",
-    "email": "ebenezer_ngama@gmail.com",
+    "email": "ebenezerskilscentre@gmail.com",
     "locationLine": "Ngama, Kajiado County · Near the Kenya–Tanzania Border",
     "hoursWeekdays": "Mon–Fri: 8:00 AM – 7:00 PM",
     "hoursSaturday": "Saturday: 9:00 AM – 5:00 PM",

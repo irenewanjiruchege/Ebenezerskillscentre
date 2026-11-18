@@ -19,14 +19,20 @@ type ActiveView = 'home' | 'programs' | 'printing' | 'institutions' | 'admission
 const FALLBACK_DATA: PublicSiteData = {
   courses: [
     {
-      id: 'comp-basics',
+      id: 'comp-intro',
       category: 'computer',
-      title: 'Computer Skills: Beginner to Intermediate',
-      level: 'Beginner',
-      duration: '4 Weeks',
-      schedule: 'Mon–Fri · Morning or Afternoon',
-      fee: 'KSh 3,500',
-      highlights: ['Typing & mouse mastery', 'Windows file organisation', 'Email & internet', 'Everyday cyber services'],
+      title: 'Introduction to Computers',
+      level: 'Beginner to Advanced',
+      duration: '6 Weeks',
+      schedule: 'Mon–Fri · 4-Seat Practical Lab',
+      fee: 'KSh 5,000',
+      highlights: [
+        'MS Word formatting & documents',
+        'MS Excel spreadsheets & formulas',
+        'MS PowerPoint presentations',
+        'MS Access databases',
+        'Internet & Online Security',
+      ],
       active: true,
     },
     {
@@ -35,7 +41,7 @@ const FALLBACK_DATA: PublicSiteData = {
       title: 'Secondary School Tuition & KCSE Preparation',
       level: 'Form 1–4',
       duration: 'Monthly',
-      schedule: 'Evenings & Saturdays',
+      schedule: '',
       fee: 'KSh 2,500 / month',
       highlights: ['KCSE exam technique', 'Sciences, Maths & English', 'Structured revision'],
       active: true,
@@ -54,7 +60,7 @@ const FALLBACK_DATA: PublicSiteData = {
   settings: {
     phoneDisplay: '0714 490545',
     whatsappIntl: '254714490545',
-    email: 'ebenezer_ngama@gmail.com',
+    email: 'ebenezerskilscentre@gmail.com',
     locationLine: 'Ngama, Kajiado County · Near the Kenya–Tanzania Border',
     hoursWeekdays: 'Mon–Fri: 8:00 AM – 7:00 PM',
     hoursSaturday: 'Saturday: 9:00 AM – 5:00 PM',

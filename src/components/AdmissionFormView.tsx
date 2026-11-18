@@ -8,15 +8,13 @@ interface AdmissionFormViewProps {
 }
 
 const PROGRAMME_OPTIONS = [
-  'Computer Training (Beginner)',
-  'Computer Training (Intermediate)',
-  'Computer Training (Advanced)',
+  'Introduction to Computers — 6 Weeks (KSh 5,000)',
   'Student Tuition — CBC (Primary)',
   'Student Tuition — JSS (Junior Secondary)',
   'Student Tuition — Secondary / KCSE',
   'Reading & Comprehension Classes',
   'Adult English & Speaking Classes',
-  'Content Creation (Video / Audio / Podcast / Editing)',
+  'Content Creation & Digital Media — 2 Months / 8 Weeks (KSh 10,000)',
   'Design & Printing Training',
   'Enterprise & Ngama Youth Online-Earning Track',
 ];
@@ -45,7 +43,7 @@ export const AdmissionFormView: React.FC<AdmissionFormViewProps> = ({
     preferredDays: ['Mon', 'Wed', 'Fri'] as string[],
     preferredTime: 'Morning' as 'Morning' | 'Afternoon' | 'Evening',
     trainingMode: 'Group' as 'Individual' | 'Group' | 'Holiday/Short Course',
-    expectedDuration: '4 Weeks',
+    expectedDuration: '6 Weeks',
     isMinor: false,
     guardianName: '',
     guardianRelationship: '',
@@ -212,17 +210,9 @@ export const AdmissionFormView: React.FC<AdmissionFormViewProps> = ({
             Admission &amp; Registration Form
           </h2>
           <p className="mt-1 text-sm text-slate-600">
-            Official digital version of our Ngama centre admission form. Takes under 3 minutes.
+            Official digital registration form for Ebenezer Technology &amp; Skills Centre, Ngama. Takes under 3 minutes.
           </p>
         </div>
-        <a
-          href="/assets/aistudio/ChatGPT_Image_Oct_5__2026__02_16_06_PM_17c5aa0c.png"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs font-semibold text-[#0A2A66] underline whitespace-nowrap"
-        >
-          View Paper Form Copy
-        </a>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">

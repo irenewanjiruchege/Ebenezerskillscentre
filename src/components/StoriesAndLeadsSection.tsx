@@ -244,23 +244,23 @@ export const StoriesAndLeadsSection: React.FC<StoriesAndLeadsSectionProps> = ({
           <div>
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-6">
               <div>
-                <p className="text-xs font-semibold text-[#F58220]">Centre Gallery &amp; Printed Flyers</p>
-                <h3 className="text-2xl font-bold text-[#0A2A66]">Materials &amp; Centre Showcase</h3>
+                <p className="text-xs font-semibold text-[#F58220]">Centre Showcase</p>
+                <h3 className="text-2xl font-bold text-[#0A2A66]">Learning &amp; Print Studio Highlights</h3>
               </div>
               <p className="text-xs text-slate-500">
-                Flyer visuals shown as placeholders while on-site Ngama photography is added via Admin.
+                Practical training, student support, media creation, and printing at our Ngama centre.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {gallery.map((g) => (
-                <figure key={g.id} className="rounded-2xl border border-[#0A2A66]/10 bg-white overflow-hidden flex flex-col">
-                  <div className="aspect-[4/3] bg-[#FAF7F2] overflow-hidden">
+                <figure key={g.id} className="group rounded-2xl border border-[#0A2A66]/10 bg-white overflow-hidden flex flex-col">
+                  <div className="aspect-[16/10] bg-[#FAF7F2] overflow-hidden">
                     <img
                       src={g.imageUrl}
                       alt={g.title}
                       loading="lazy"
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   <figcaption className="p-4 space-y-1 flex-1">
