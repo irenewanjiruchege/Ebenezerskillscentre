@@ -1,5 +1,6 @@
 import express from 'express';
 import fs from 'fs';
+import http from 'http';
 import path from 'path';
 import {fileURLToPath} from 'url';
 import dotenv from 'dotenv';
@@ -935,6 +936,8 @@ async function startServer() {
     res.type('text/plain').send(`User-agent: *\nAllow: /\nSitemap: ${baseUrl}/sitemap.xml\n`);
   });
 
+  const httpServer = http.createServer(app);
+
   // Vite Dev vs Production Static
   const distDir = path.join(__dirname, 'dist');
   const isProd = process.env.NODE_ENV === 'production' && fs.existsSync(distDir);
@@ -947,13 +950,17 @@ async function startServer() {
   } else {
     const {createServer: createViteServer} = await import('vite');
     const vite = await createViteServer({
-      server: {middlewareMode: true},
+      server: {
+        middlewareMode: true,
+        ws: {server: httpServer},
+        hmr: process.env.DISABLE_HMR === 'true' ? false : {server: httpServer},
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
+  httpServer.listen(PORT, '0.0.0.0', () => {
     console.log(`Ebenezer Technology and Skills Centre running on http://0.0.0.0:${PORT}`);
   });
 }
